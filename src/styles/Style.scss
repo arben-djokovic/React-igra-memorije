@@ -1,0 +1,124 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+button{
+    border: none;
+}
+body{
+    background-color: rgb(255, 195, 173);
+}
+.pokusaji{
+    position: absolute;
+    left: 10vw;
+    top: 10vh;
+}
+.gamePage{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    .gameGrid{
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        width: 500px;
+        height: 400px;
+        .imgDiv{
+            background-color: red;
+            height: 110px;
+            width: 110px;
+            border: 1px solid black;
+            &:hover{
+                opacity: 0.8;
+            }
+            img{
+                height: 110px;
+                width: 110px;
+                opacity: 0;
+                cursor: pointer;
+            }
+        }
+        
+    }
+}
+
+.gameOverPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    h1{
+      margin-bottom: 20px;
+    }
+    button{
+        padding: 10px 20px;
+        background-color: blue;
+        color: white;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 10px;
+        &:hover{
+            opacity: .8;
+        }
+    }
+  }
+  .startGame{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+      align-items: center;
+      h1{
+          margin-bottom: 20px;
+      }
+      input{
+          padding: 10px;
+          margin-bottom: 15px;
+          text-align: center;
+          border-radius: 5px;
+          font-size: 17px;
+      }
+      button{
+          padding: 10px 20px;
+          background-color: blue;
+          color: white;
+          letter-spacing: 1px;
+          border-radius: 5px;
+          cursor: pointer;
+          &:hover{
+              background-color: rgb(50, 50, 255);
+          }
+      }
+  }
+  @media only screen and (max-width: 600px) {
+      .gameGrid{
+          grid-template-columns: repeat(3,1fr) !important;
+          height: auto !important;
+          &>div{
+              margin: 10px;
+          }
+      }
+  }
+  @media only screen and (max-width: 360px) {
+      .gamePage{
+          .gameGrid{
+        grid-template-columns: repeat(2,1fr);
+        height: auto ;
+        .imgDiv{
+            height: 80px ;
+            width: 80px ;
+            margin: 5px ;
+            img{
+                height: 100%;
+                width: 100% ;
+            }
+        }
+    }
+      }
+    
+}
