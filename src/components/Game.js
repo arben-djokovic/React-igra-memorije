@@ -2,14 +2,14 @@ import React, { useEffect, useState,useRef } from 'react'
 import { useNavigate } from 'react-router'
 
 export default function Game() {
-    var lista2 = []
-    var otvoreno = []
-    var lista1 = []
-    var navigate = useNavigate()
-    var numberFinished = 0
-    var pokusaji = 14
-    var pokusajiDiv = useRef()
-    var [list, setList] = useState([])
+    let lista2 = []
+    let otvoreno = []
+    let lista1 = []
+    const navigate = useNavigate()
+    let numberFinished = 0
+    let pokusaji = 14
+    const pokusajiDiv = useRef()
+    let [list, setList] = useState([])
     do {
         let random = Math.floor(Math.random() * 10)
         if (!lista2.includes(random) && random <= 5) {
@@ -25,8 +25,8 @@ export default function Game() {
     } while (lista1.length !== 6)
 
 
-    var lista3 = [...lista1, ...lista2]
-    var lista4 = lista3
+    let lista3 = [...lista1, ...lista2]
+    let lista4 = lista3
         .map((value) => ({ value, sort: Math.random() }))
         .sort((a, b) => a.sort - b.sort)
         .map(({ value }) => value)
