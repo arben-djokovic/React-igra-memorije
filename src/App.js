@@ -6,7 +6,7 @@ import { useState } from 'react/cjs/react.development';
 import GameFinished from './components/GameFinished';
 
 function App() {
-  var navigate = useNavigate()
+  const navigate = useNavigate()
   return (
     <div className="App">
       <Routes>
