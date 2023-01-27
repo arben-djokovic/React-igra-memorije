@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router'
 
 export default function GameFinished() {
-    var navigate = useNavigate()
+    const navigate = useNavigate()
     return (
         <div className='gameOverPage'>
             <h1>Good job!</h1>
